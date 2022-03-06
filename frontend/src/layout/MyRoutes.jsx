@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter,  Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import HomeScreen from "../pages/HomeScreen";
 import SingleProduct from "../pages/SingleProduct";
 import Login from "../pages/Login";
@@ -12,7 +12,6 @@ import OrderScreen from '../pages/OrderScreen';
 import NotFound from '../pages/NotFound';
 const MyRoutes = () => {
     return (
-        <BrowserRouter>
             <Routes>
                 <Route path='/' exact element={<HomeScreen />} />
                 <Route path='/products/:id' element={<SingleProduct />} />
@@ -25,7 +24,6 @@ const MyRoutes = () => {
                 <Route path='/order' element={<OrderScreen />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
-        </BrowserRouter>
     )
 }
 
